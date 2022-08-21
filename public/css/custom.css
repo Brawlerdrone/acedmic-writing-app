@@ -1,0 +1,78 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+.header-size-custom #logo img {
+	height: 55px;
+}
+@media (min-width: 992px) {
+
+	.header-size-custom .header-wrap-clone {
+		height: calc( 55px + 1px );
+	}
+
+	#header.header-size-custom + .include-header {
+		margin-top: calc( -55px - 2px );
+	}
+
+	.header-size-custom.sticky-header-shrink #header-wrap #logo img {
+		height: 55px;
+	}
+
+	.header-size-custom .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (55px - 22px)/2 */
+		padding-bottom: 24px; /* (55px - 22px)/2 */
+	}
+
+	.header-size-custom.sticky-header-shrink .menu-container > .menu-item > .menu-link {
+		padding-top: 24px; /* (55px - 22px)/2 */
+		padding-bottom: 24px; /* (55px - 22px)/2 */
+	}
+
+}
+
+/* Testimonials Carousel
+-----------------------------------------------------------------*/
+.testimonials-carousel .owl-stage { padding-top: 40px }
+
+.testimonials-carousel .owl-item {
+	opacity: .6;
+	transition: transform .3s ease;
+	transform: scale(0.8);
+}
+
+.testimonials-carousel .owl-item.active.center {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.testimonial {
+	border: 0;
+	box-shadow: 0 0 35px rgba(140, 152, 164, 0.2);
+	border-radius: 0.25rem;
+	padding: 25px;
+}
+
+.testi-image {
+	float: none;
+	margin: -55px auto 0;
+	margin-bottom: 20px;
+}
+
+.testi-content p {
+	text-align: center;
+	font-style: normal;
+	font-family: var(--fontfamily,'Nunito', sans-serif);
+	font-size: 14px;
+}
+
+.testi-meta {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.paragraph{
+	font-size: 14px;
+}
