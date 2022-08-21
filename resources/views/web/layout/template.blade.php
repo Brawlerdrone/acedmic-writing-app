@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="{{asset('css/theme/seo/css/fonts.css')}}" type="text/css" />
         <!-- <link rel="stylesheet" href="demos/seo/seo.css" type="text/css" /> -->
         <!-- / -->
-    
+        @livewireStyles
         <!-- Document Title
         ============================================= -->
         <title>Essayroo Clone</title>
@@ -61,6 +61,7 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="{{asset('js/functions.js')}}"></script>
+    @livewireScripts
     
 </body>
 </html>
