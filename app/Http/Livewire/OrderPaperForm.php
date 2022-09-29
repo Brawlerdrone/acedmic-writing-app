@@ -45,6 +45,12 @@ class OrderPaperForm extends Component
     }
     public function getPaperUnderService($id){
         
+        $papers = DB::table('papers')->where('service_id',$id)->get();
+
+        //dd($papers);
+
+
+        return response()->json($papers);
     }
 
 }

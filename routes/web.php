@@ -27,3 +27,5 @@ Route::get('order', [HomeController::class, 'order'])->name('order');
 
 
 Route::get('/getServicePrice/{id}',[OrderPaperForm::class, 'getServicePrice']);
+
+Route::get('/getPapersUnderService/{id}', [OrderPaperForm::class, 'getPaperUnderService']);

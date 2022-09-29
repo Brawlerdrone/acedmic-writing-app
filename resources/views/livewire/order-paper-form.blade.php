@@ -36,8 +36,8 @@
                             <label>Type of paper:</label>
                         </div>
                         <div class="col-sm-8">
-                            <select class = "form-select required valid" name="" id="">
-                                    
+                            <select class = "form-select" name="paper_id" id="paper_id">
+                               
                                 {{-- <option value="1">Essay</option>
                                 <option value="2">Dissertation</option>
                                 <option value="3">Admission services</option>
