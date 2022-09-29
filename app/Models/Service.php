@@ -14,9 +14,6 @@ class Service extends Model
         'name',
         'price_type_id',
         'price',
-        'single_spacing_price',
-        'double_spacing_price',
-        'minimum_order_quantity',
-        'inactive'
+       
     ];
 }

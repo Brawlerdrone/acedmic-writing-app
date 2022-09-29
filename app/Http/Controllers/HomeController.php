@@ -45,6 +45,13 @@ class HomeController extends Controller
 
     public function order(){
 
+       // $services = Service::all();
         return view('web.order');
+    }
+
+
+    public function dashboard(){
+
+        return view('home');
     }
 }
