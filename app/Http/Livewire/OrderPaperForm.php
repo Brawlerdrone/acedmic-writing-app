@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Service;
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
 
 class OrderPaperForm extends Component
 {
@@ -29,6 +31,26 @@ class OrderPaperForm extends Component
 
     public function render()
     {
-        return view('livewire.order-paper-form');
+        $services = Service::all();
+        return view('livewire.order-paper-form')->with([
+
+            "services" => $services,
+        ]);
     }
+    public function getServicePrice($id){
+        $p = DB::table('services')->where('id',$id)->first();
+        //dd($p);
+
+        return response()->json($p);
+    }
+    public function getPaperUnderService($id){
+        
+        $papers = DB::table('papers')->where('service_id',$id)->get();
+
+        //dd($papers);
+
+
+        return response()->json($papers);
+    }
+
 }

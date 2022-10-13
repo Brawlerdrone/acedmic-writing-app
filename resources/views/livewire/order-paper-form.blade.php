@@ -12,12 +12,17 @@
                         </div>
                         <div class="col-sm-8">
                             
-                            <select class = "form-select required valid" name="" id="">
-                                    
-                                <option value="1">Academic paper writing</option>
+                            <select class = "form-select serviceCategory" name="service_id" id="service_id">
+                                <option value="0" disabled="true" selected="true" >select a service</option>
+                                {{-- <option value="1">Academic paper writing</option>
                                 <option value="2">Dissertation</option>
                                 <option value="3">Admission services</option>
-                                <option value="4">Editing</option>
+                                <option value="4">Editing</option> --}}
+                                @foreach ($services as $service)
+							        <option value="{{ $service->id }}">{{ $service->name }}</option>
+																	
+								@endforeach
+
 
                             </select>
                         </div>
@@ -31,12 +36,12 @@
                             <label>Type of paper:</label>
                         </div>
                         <div class="col-sm-8">
-                            <select class = "form-select required valid" name="" id="">
-                                    
-                                <option value="1">Essay</option>
+                            <select class = "form-select" name="paper_id" id="paper_id">
+                               
+                                {{-- <option value="1">Essay</option>
                                 <option value="2">Dissertation</option>
                                 <option value="3">Admission services</option>
-                                <option value="4">Editing</option>
+                                <option value="4">Editing</option> --}}
 
                             </select>
                         </div>
@@ -180,7 +185,7 @@
 
                         </select>
                     </div>
-                    <small>price per page: $12.99</small>
+                    {{-- <small>price per page: $12.99</small> --}}
                     
                 </div>
                 
@@ -191,8 +196,8 @@
                     <div class="col-sm-6">
                         <p class="ls0">Total price:</p>
                     </div>
-                    <div class="col-sm-6">
-                        <p class="ls0 center">$12.99</p>
+                    <div class="col-sm-6 service_price">
+                        {{-- <p class="ls0 center">$12.99</p> --}}
                     </div>
                     
                 </div>
